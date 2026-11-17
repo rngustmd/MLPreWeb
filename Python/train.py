@@ -1,5 +1,5 @@
 import pandas as pd
-df = pd.read_csv('./data/bodyPerformance_no_class.csv')
+df = pd.read_csv('./Python/bodyPerformance_no_class.csv')
 print( df.shape )
 print( df.head() )
 
@@ -79,9 +79,9 @@ import joblib
 joblib.dump( final_model , './body_model.pkl' )
 
 test_r2 = final_model.score( X_test , Y_test )
-joblib.dump( test_r2 , './body_r2.pkl' )
+joblib.dump( test_r2 , './Python/body_r2.pkl' )
 
-model = joblib.load( './body_model.pkl' )
+model = joblib.load( './Python/body_model.pkl' )
 
 new_bodyPerformance = pd.DataFrame( [
     # 1번 고객

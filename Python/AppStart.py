@@ -12,7 +12,7 @@ app.add_middleware( CORSMiddleware , allow_origins=["*"] ,
                     allow_methods=["*"] , allow_headers=["*"] )
 
 # 컨트롤러에 라우터 연결
-import Controller
+import Python.Controller as Controller
 app.include_router( Controller.router )
 
 # 서버 실행 , 확인 : http://127.0.0.1:8000/docs

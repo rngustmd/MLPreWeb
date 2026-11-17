@@ -3,7 +3,7 @@ from fastapi import APIRouter
 router = APIRouter( prefix="/api" )
 
 # 서비스 객체 불러오기
-from Service import body_service
+from Python.Service import body_service
 
 # 스트리밍 응답 : 결과를 한 번에 return 하지 않고 여러 번 나눠서 보냄 (SSE)
 from fastapi.responses import StreamingResponse
